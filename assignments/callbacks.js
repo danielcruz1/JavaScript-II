@@ -43,21 +43,25 @@ last(items, (lastItem) => {
   console.log(lastItem);
 });
 
-function sumNums(x, y, cb) {
+// function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
-    return cb(x + y);
-}
-sumNums(4,6, function(x, y) {
-  console.log(x + y);
-});
+  const sumNums = (x, y, cb) => {
+    cb(x + y);
+  };
+  sumNums(3, 4, (sum) => {
+    console.log(sum);
+  });
 
 
-function multiplyNums(x, y, cb) {
+
+// function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
-  return cb(x * y);
-  }
-multiplyNums(4, 6, function(x, y) {
-  console.log(x * y);
+//   return cb(x * y);
+const multiplyNums = (x, y, cb) => {
+  cb(x * y);
+};
+multiplyNums(3, 4, (product) => {
+  console.log(product);
 });
 
 
