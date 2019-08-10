@@ -62,7 +62,7 @@ let name = runners.forEach((object) => {
 })
 console.log(fullName);
 
-//.map version
+// // .map version
 // const fullName = runners.map((data) => {
 //     return `${data.first_name} ${data.last_name}`;
 // });
@@ -102,8 +102,26 @@ console.log(ticketPriceTotal);
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1
+// Problem 1 - Marketing would like to send a gift basket to every company that has a participant. Please provide a list of all companies represented.  
+ const companyName = runners.map((object) => {
+        return `${object.company_name}`;
+    });
+    console.log(companyName.sort());    
 
-// Problem 2
+// Problem 2 - Creat a list of all the runners who ordered small shirts. 
+let smallShirts = [];
+const sizeS = (object) => {
+    return object.shirt_size === 'S';
+}
+smallShirts = runners.filter(sizeS);
+console.log(smallShirts);
 
-// Problem 3
+
+
+// Problem 3 - Create a list of all email addresses used for registration. 
+const schoolEmail = runners.map((object) => {
+    return `${object.email}`;
+})
+console.log(schoolEmail.sort());
+
+
